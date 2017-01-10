@@ -4,4 +4,4 @@ restful service provider
 
 提供的测试接口：  
 http://localhost:8762/greeting?name=world  
-http://localhost:8762/random  
+http://localhost:8762/add?num=1
