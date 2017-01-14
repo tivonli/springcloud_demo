@@ -11,15 +11,13 @@ import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.ResponseEntity;
-import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.tivon.springcloud.service.GreetingService;
 
 @RunWith(SpringRunner.class)
 // 启动内置tomcat需要指定webEnvironment参数
-@SpringBootTest(webEnvironment=WebEnvironment.RANDOM_PORT)
-@DirtiesContext
+@SpringBootTest(webEnvironment=WebEnvironment.RANDOM_PORT, properties="classpath:config/config-test.properties")
 public class GreetingControllerWiMockTest {
 
 	@Autowired

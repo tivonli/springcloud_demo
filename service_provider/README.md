@@ -4,4 +4,5 @@ restful service provider
 
 提供的测试接口：  
 http://localhost:8762/greeting?name=world  
-http://localhost:8762/add?num=1
+http://localhost:8762/add?num=1　
+http://localhost:8762/config     (测试从配置中心读取配置值)
