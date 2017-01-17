@@ -13,6 +13,9 @@ public class HelloService {
 	@Autowired
 	RestTemplate restTemplate;
 
+	/*
+	 * add hystrix, in order to test turbin cluster
+	 */
 	@HystrixCommand(fallbackMethod = "helloFallback")
 	public String hello() {
 		ResponseEntity<String> entity = restTemplate.getForEntity("http://service-provider/greeting?name=world",
@@ -25,10 +28,10 @@ public class HelloService {
 
 	}
 	
-	@HystrixCommand(fallbackMethod = "helloFallback")
-	public String random() {
-		ResponseEntity<String> entity = restTemplate.getForEntity("http://service-provider/random",
+	public String add(int num) {
+		ResponseEntity<String> entity = restTemplate.getForEntity("http://service-provider/add?num=" + num,
 				String.class);
+		
 		if (entity != null && entity.getStatusCodeValue() == 200) {
 			return entity.getBody();
 		} else {
