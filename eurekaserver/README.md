@@ -1,4 +1,4 @@
 ecreka server
 
 
-http://localhost:8761
+http://localhost:6066
