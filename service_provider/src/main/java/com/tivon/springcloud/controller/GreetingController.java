@@ -17,6 +17,9 @@ public class GreetingController {
 	
 	@Value("${from}")
     private String from;
+	
+	@Value("${password}")
+    private String password;
 
 	@Autowired
 	GreetingService service;
@@ -33,6 +36,6 @@ public class GreetingController {
     
     @RequestMapping(value="/config", method=RequestMethod.GET)
     public String config() {
-    	return from;
+    	return "from=" + from + "\npassword=" + password;
     }
 }

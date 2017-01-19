@@ -41,6 +41,28 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
+		<!--  test /docs metrics, not success yet 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-actuator-docs</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-hateoas</artifactId>
+		</dependency>
+		 test /docs metrics, not success yet -->
+		
+
+		<dependency>
+		    <groupId>com.github.ulisesbocchio</groupId>
+		    <artifactId>jasypt-spring-boot-starter</artifactId>
+		    <version>1.11</version>
+		</dependency>
+		
 		<!-- 
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
